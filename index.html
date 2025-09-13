@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amaane, professional video editor offering stunning video editing services including motion graphics.">
+    <meta name="keywords" content="video editor, video editing, Amaane, portfolio, professional video editing, motion graphics">
+    <meta name="author" content="Amaane">
+    <title>Amaane - Video Editing Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Amaane</div>
+            <div class="menu-toggle">☰</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#admin" id="admin-link">Admin Panel</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="content">
+            <h1 class="welcome-text">Elevate Your Videos With Amaane</h1>
+            <p class="welcome-text">Transforming your ideas into stunning video edits with expertise and creativity.</p>
+            <a href="#portfolio" class="btn welcome-text">See My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Amaane, a passionate video editor skilled in creating cinematic videos, YouTube content, and motion graphics. I’m proficient in translating ideas into visually stunning edits!</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <video autoplay muted loop controls>
+                    <source src="assist/vi1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Project 1: Cinematic Edit </p>
+            </div>
+            <div class="portfolio-item">
+                <video autoplay muted loop controls>
+                    <source src="assist/vi2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Project 2: YouTube Intro</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Need a video editor? Get in touch!</p>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://youtu.be/p6j9mdwFUTo?si=1Bj5ZQA8JDXurS5Z" target="_blank">YouTube</a> |
+            <a href="https://www.instagram.com/m.r_amaane?igsh=MTYzNWt6NWUyeHByZQ==" target="_blank">Instagram</a> |
+            <a href="mailto:craftyamaane@gmail.com">Email</a>
+        </div>
+        <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com" data-context="signup" data-ux_mode="popup" data-callback="handleCredentialResponse" data-auto_select="true"></div>
+        <div class="g_id_signup" data-type="standard"></div>
+    </section>
+
+    <section id="admin" class="hidden">
+        <h2>Admin Panel</h2>
+        <p>Welcome, Admin! Here you can track website activity.</p>
+        <h3>Visit Logs</h3>
+        <ul id="visit-logs"></ul>
+        <h3>Login Logs</h3>
+        <ul id="login-logs"></ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Amaane. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

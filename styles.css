@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #4b0082, #000);
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+.nav-menu li {
+    margin-left: 2rem;
+}
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+}
+.nav-menu li a:hover {
+    color: #9370db;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+#home .content {
+    z-index: 1;
+}
+#home h1 {
+    font-size: clamp(1.5rem, 8vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+#home p {
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+}
+.btn {
+    background: linear-gradient(45deg, #9370db, #8a4af3);
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(147, 112, 219, 0.7);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+.btn:hover {
+    box-shadow: 0 0 25px rgba(147, 112, 219, 0.9);
+    transform: translateY(-2px);
+}
+
+#about, #portfolio, #contact {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+#about h2, #portfolio h2, #contact h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.portfolio-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.portfolio-item p {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+#contact form {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+#contact input, #contact textarea {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+#contact input:focus, #contact textarea:focus {
+    box-shadow: 0 0 10px rgba(147, 112, 219, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+}
+#contact textarea {
+    height: 120px;
+}
+.social-links {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+.social-links a {
+    color: #9370db;
+    text-decoration: none;
+    margin: 0 0.8rem;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #8a4af3;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+/* Mobile Specific Styles (max-width: 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-menu li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    .nav-menu li a {
+        font-size: 1.1rem;
+    }
+    #home {
+        padding-top: 4rem;
+    }
+    #about, #portfolio, #contact {
+        padding-top: 4rem;
+    }
+}
+
+/* Desktop Specific Styles (min-width: 769px) */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    .nav-menu {
+        display: flex !important;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .nav-menu li {
+        margin-left: 2rem;
+    }
+    .nav-menu li a {
+        font-size: 1rem;
+    }
+    #home h1 {
+        font-size: 3.5rem;
+    }
+    #home p {
+        font-size: 1.2rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    #about, #portfolio, #contact {
+        padding: 5rem 2rem;
+    }
+    #about h2, #portfolio h2, #contact h2 {
+        font-size: 2.5rem;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        max-width: 80%;
+    }
+    #contact textarea {
+        height: 150px;
+    }
+    .social-links {
+        font-size: 1rem;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
